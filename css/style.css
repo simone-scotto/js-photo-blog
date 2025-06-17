@@ -1,0 +1,23 @@
+/***********CSSRESET********/
+
+* {
+    margin: 0;
+    padding:  0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    background-image: url(../img/wall.png);
+    height: 148px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 960px;
+    background-image: url(../img/cork.png);
+
+}

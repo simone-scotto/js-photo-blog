@@ -8,8 +8,6 @@ fetch(endpoint)
     const postCards = data;
     //console.log(postCards);
     postCards.forEach((card) => {
-      const { id, title, date, url } = card;
-      //console.log(card);
       const cardMarkup = generateCards(card);
       console.log(cardMarkup);
       rowEl.insertAdjacentHTML(`beforeend`, cardMarkup);
@@ -18,7 +16,7 @@ fetch(endpoint)
 
 function generateCards(card) {
   const { id, title, date, url } = card;
-  const cardMarkup = `<div class="col">
+  const cardMarkup = `<div class="col col_md_6 col_sm_12">
             <div class="card">
               <div class="card_head">
                 <img class="pin" src=".//img/pin.svg" alt="pin" />

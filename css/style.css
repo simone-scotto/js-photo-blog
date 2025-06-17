@@ -33,7 +33,7 @@ main {
 }
 
 .container {
-    width: 60%;
+    width: 936px;
     margin: 0 auto;
     padding-top: 3rem;
 }
@@ -95,7 +95,32 @@ main {
 
 /******MEDIAQUEERIES*******/
 
-/* @media screen and () {
+
+
+
+ @media screen and (max-width: 992px)  {
+
+    .container {
+        width: 620px;
+    }
+
+    .col_md_6 {
     
+        width: calc(100% / 12 * 6) ;
+    }
+
 }
- */
+ 
+
+@media screen and (max-width: 690px) {
+
+
+    .container {
+        width: 300px;
+    }
+    .col_sm_12 {
+    
+        width: 100% ;
+    }
+
+}

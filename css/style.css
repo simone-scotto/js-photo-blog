@@ -39,7 +39,7 @@ main {
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    margin: -1rem;
 }
 
 .col {
@@ -53,11 +53,18 @@ main {
     background-color: white;
     padding: 1rem;
     margin:  0 auto;
+    position: relative;
 
 
     .card_head {
     width: 264px;
     height: 264px;
+
+        .pin {
+            position: absolute;
+            top: -10px;
+            left: 45%;
+        }
 
         .card_img {
             max-width: 100%;

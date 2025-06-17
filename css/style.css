@@ -9,10 +9,11 @@
 /*FONTS*/
 h1 {
     font-family:  Edu Tas Beginner, sans-serif;
+    font-size: 5rem;
 }
 
 .tx_ita {
-    font-family:  Edu Tas Beginner, sans-serif;
+    font-family:  Sometype Mono, monospace;
     font-style: italic;
 }
 
@@ -26,20 +27,21 @@ header {
 
 
 main {
-    height: 960px;
+    
     background-image: url(../img/cork.png);
 
 }
 
 .container {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
+    padding-top: 3rem;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: -1rem;
+    margin: 0 -1rem;
 }
 
 .col {
@@ -48,32 +50,52 @@ main {
 }
 
 .card {
-    width: 296px;
-    height: 360px;
+    
+    
     background-color: white;
     padding: 1rem;
-    margin:  0 auto;
+    
     position: relative;
 
 
+    
     .card_head {
-    width: 264px;
-    height: 264px;
+
+        
+
 
         .pin {
-            position: absolute;
-            top: -10px;
-            left: 45%;
+        position: absolute;
+        transform: translate(-15px, -15px);
+        left: 50%;
         }
 
         .card_img {
-            max-width: 100%;
-            height: 100%;
+        width: 100%;
+            
         }
+
     }
+   
+
+    
+    
     .card_body {
         margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .date {
+            font-weight: 600;
+        }
     }
 }
 
 
+/******MEDIAQUEERIES*******/
+
+/* @media screen and () {
+    
+}
+ */

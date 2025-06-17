@@ -6,7 +6,15 @@
     box-sizing: border-box;
 }
 
+/*FONTS*/
+h1 {
+    font-family:  Edu Tas Beginner, sans-serif;
+}
 
+.tx_ita {
+    font-family:  Edu Tas Beginner, sans-serif;
+    font-style: italic;
+}
 
 header {
     background-image: url(../img/wall.png);
@@ -16,8 +24,49 @@ header {
     align-items: center;
 }
 
+
 main {
     height: 960px;
     background-image: url(../img/cork.png);
 
 }
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col {
+    padding: 1rem;
+    width: calc(100% / 12 * 4) ;
+}
+
+.card {
+    width: 296px;
+    height: 360px;
+    background-color: white;
+    padding: 1rem;
+    margin:  0 auto;
+
+
+    .card_head {
+    width: 264px;
+    height: 264px;
+
+        .card_img {
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+    .card_body {
+        margin-top: 1rem;
+    }
+}
+
+

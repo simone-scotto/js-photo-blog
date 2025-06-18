@@ -1,4 +1,7 @@
 const rowEl = document.querySelector(".row");
+const modalcontnentEl = document.querySelector(".modal_contnent");
+const modalEl = document.querySelector(".modal");
+console.log(modalcontnentEl, modalEl);
 
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
 
@@ -12,52 +15,26 @@ fetch(endpoint)
 
       rowEl.insertAdjacentHTML(`beforeend`, cardMarkup);
 
-      /* imgEl.forEach((img) => {
-        imgEl.addEventListener("click", () => {
-          modalEl.style.display = "block";
-        });
-      }); */
-
-      /* btnOff.addEventListener("click", () => {
-        modalEl.style.display = "none";
-      }); */ console.log(cardMarkup);
+      console.log(cardMarkup);
     });
 
     const imgEL = document.querySelectorAll(".card_img");
     const modalEl = document.querySelector(".modal");
     const btnOff = document.querySelector(".btn_off");
     const adateEl = document.querySelectorAll(".tx_ita");
+    const modalimgEl = document.querySelector(".modal_img");
 
-    console.log(imgEL, adateEl);
+    console.log(imgEL, modalimgEl);
 
     imgEL.forEach((imgEL) => {
       imgEL.addEventListener("click", () => {
         modalEl.style.display = "block";
+        modalimgEl.src = imgEL.src;
       });
       btnOff.addEventListener("click", () => {
         modalEl.style.display = "none";
       });
     });
-
-    /* const imgEL = data.map((url) => url.url);
-
-    console.log(imgEL);
-
-    const cardimgEl = document.getElementById("img");
-    console.log(cardimgEl);
-
-    const modalEl = document.querySelector(".modal");
-    const btnOff = document.querySelector(".btn_off");
-
-    imgEL.forEach((url) => {
-      cardimgEl.addEventListener("click", () => {
-        modalEl.style.display = "block";
-      }); */
-    //});
-
-    /* cardimgEl.addEventListener("click", () => {
-      modalEl.style.display = "block";
-    }); */
   });
 
 function generateCards(card) {
@@ -80,6 +57,10 @@ function generateCards(card) {
           </div>`;
   return cardMarkup;
 }
+
+/* function generatemodalImg (url) {
+  const 
+} */
 
 /* function generateMarkup(member) {
   const { id, title, email, img } = member;

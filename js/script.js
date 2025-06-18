@@ -9,9 +9,55 @@ fetch(endpoint)
     //console.log(postCards);
     postCards.forEach((card) => {
       const cardMarkup = generateCards(card);
-      console.log(cardMarkup);
+
       rowEl.insertAdjacentHTML(`beforeend`, cardMarkup);
+
+      /* imgEl.forEach((img) => {
+        imgEl.addEventListener("click", () => {
+          modalEl.style.display = "block";
+        });
+      }); */
+
+      /* btnOff.addEventListener("click", () => {
+        modalEl.style.display = "none";
+      }); */ console.log(cardMarkup);
     });
+
+    const imgEL = document.querySelectorAll(".card_img");
+    const modalEl = document.querySelector(".modal");
+    const btnOff = document.querySelector(".btn_off");
+    const adateEl = document.querySelectorAll(".tx_ita");
+
+    console.log(imgEL, adateEl);
+
+    imgEL.forEach((imgEL) => {
+      imgEL.addEventListener("click", () => {
+        modalEl.style.display = "block";
+      });
+      btnOff.addEventListener("click", () => {
+        modalEl.style.display = "none";
+      });
+    });
+
+    /* const imgEL = data.map((url) => url.url);
+
+    console.log(imgEL);
+
+    const cardimgEl = document.getElementById("img");
+    console.log(cardimgEl);
+
+    const modalEl = document.querySelector(".modal");
+    const btnOff = document.querySelector(".btn_off");
+
+    imgEL.forEach((url) => {
+      cardimgEl.addEventListener("click", () => {
+        modalEl.style.display = "block";
+      }); */
+    //});
+
+    /* cardimgEl.addEventListener("click", () => {
+      modalEl.style.display = "block";
+    }); */
   });
 
 function generateCards(card) {
@@ -20,7 +66,7 @@ function generateCards(card) {
             <div class="card">
               <div class="card_head">
                 <img class="pin" src=".//img/pin.svg" alt="pin" />
-                <img class="card_img" src="${url}" alt="img" />
+                <img id="img" class="card_img" src="${url}" alt="img" />
               </div>
               <div class="card_body">
                 <span class="tx_ita date"

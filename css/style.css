@@ -49,13 +49,24 @@ main {
     width: calc(100% / 12 * 4) ;
 }
 
+.card:hover {
+    
+        cursor: pointer;
+        transform: rotate(5deg);
+    
+    }
+
 .card {
     
     
     background-color: white;
     padding: 1rem;
     
+    
     position: relative;
+    
+
+    
 
 
     
@@ -90,7 +101,51 @@ main {
             font-weight: 600;
         }
     }
+
+   
+
 }
+
+
+
+/******MODALE/**********/
+
+
+
+.d-none {
+    display: none;
+}
+
+
+.modal {
+    background-color: #000000a3;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    
+
+    .btn_off {
+        background-color: transparent;
+        font-size: 40px;
+        margin-left: 80%;
+        margin-top: 20px;
+        border: 0px, solid, transparent;
+
+        :hover {
+            cursor: pointer;
+        }
+    } 
+
+    .modal_contnent {
+        display: flex;
+        justify-content: center;      
+        height: 100%;
+        align-items: center;
+        }
+}
+
 
 
 /******MEDIAQUEERIES*******/
